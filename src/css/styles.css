@@ -1,0 +1,13 @@
+.addBtn
+{
+    font-size: 35px;
+}
+.notesLisr
+{
+    height: 500;
+    border-right: 2px solid gray;
+}
+.notesEdit
+{
+    height: 500;
+}
