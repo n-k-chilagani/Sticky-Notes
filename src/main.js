@@ -12,8 +12,8 @@ require('electron-reload')(__dirname, {
 function createWindow()
 {
     var win = new BrowserWindow({
-		height:500,
-		width:600,
+		height:450,
+		width:650,
 		frame:false,
 		webPreferences:{
 			nodeIntegration:true
@@ -26,7 +26,7 @@ function createWindow()
 app.whenReady().then(createWindow)
 
 app.on('ready', function(){
-    template = []
-	const menu = Menu.buildFromTemplate(template)
-	Menu.setApplicationMenu(menu);
+    //template = []
+	//const menu = Menu.buildFromTemplate(template)
+	//Menu.setApplicationMenu(menu);
 })

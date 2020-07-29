@@ -11,22 +11,34 @@
 
     <title>Sticky Notes</title>
   </head>
-  <body>
-	<div class="container">
-		<div class="row addBtn" > + </div>
+  <body class="bodyClass">
+	<div class="container-fluid ">
+		<div class="row" >
+		<div class="col-6"><span class="addBtn"> &#x271A; </span></div>
+		<div class="col-6"><span class="crossButton"> &#x2718; </span> </div>
+		</div>
 		<div class="row">
-		  <div class="col-4 notesList">
-			Sticky Notes
-		  </div>
-		  <div class="col-8 notesEdit">
-			Editing sticky notes
-		  </div>
+		<div class="col-4 notesList">
+			<div class="panel panel-primary" id="result_panel">
+				<div class="panel-heading"><h3 class="panel-title">Available Notes</h3></div>
+				<div class="panel-body ">
+					<ul class="list-group" id="notesList"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-8 notesEdit">
+			<div id="heading" contenteditable="true" data-placeholder="heading"></div>
+			<div id = "content" contenteditable="true" data-placeholder="content"></div>
+		</div>
 		</div>
 	  </div>
 	</div>
 	<script src="../node_modules/jquery/dist/jquery.min.js" ></script>
 	<script src="../node_modules/jquery/dist/jquery.slim.min.js" ></script>
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js" ></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script>
+		require('./js/index.js')
+	</script>
   </body>
 </html>

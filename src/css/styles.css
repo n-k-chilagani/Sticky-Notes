@@ -1,13 +1,102 @@
 .addBtn
 {
-    font-size: 35px;
+    font-size: 25px;
+    background-color:black;
+    color:whitesmoke;
+    padding-left: 7px;
+    
 }
-.notesLisr
+.crossButton
 {
-    height: 500;
-    border-right: 2px solid gray;
+    font-size: 25px;
+    background-color:black;
+    color:whitesmoke;
+    padding-left: 10px;
+    float: right;
+}
+.bodyClass
+{
+    margin: 0 0 0 0;
+    overflow: hidden;
+    background-color: black;
+}
+.notesList
+{
+    height: 100vh;
+    background-color: indigo;
+    border-right: 4px solid whitesmoke; 
+    color: ivory;
+    font-size: 15px;
+    font-family: "Lucida Console", Courier, monospace;
+    padding-right: 5px;
 }
 .notesEdit
 {
-    height: 500;
+    background-color: #222233;
+    font-family: "Lucida Console", Courier, monospace;
+    color: wheat;
+}
+
+.removeMP
+{
+    margin-left:0;
+}
+
+.list-group{
+    max-height: 350px;
+    margin-bottom: 10px;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    padding:0;
+}
+.list-group-item
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+div:focus {
+    outline: none;
+}
+#heading {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 10vh;
+    width: 100%;
+}
+  
+#content {
+    padding-top: 20px;
+    font-size: 14px;
+    height: 90vh;
+    width: 100%;
+  }
+
+  [data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #888;
+    font-style: italic;
+    
 }
