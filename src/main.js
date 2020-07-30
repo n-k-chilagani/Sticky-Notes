@@ -1,12 +1,14 @@
 const electon = require('electron');
 const BrowserWindow = electon.BrowserWindow;
 const app = electon.app;
-var path = require('path')
+const path = require('path')
 const Menu = electon.Menu
-var url = require('url');
+const url = require('url');
 
-require('electron-reload')(__dirname, {
-    electron: path.join(__dirname, 'node_modules', '.bin', 'electron.cmd')
+const ipc = electon.ipcMain;
+
+require('electron-reload')(process.cwd(), {
+    electron: path.join(process.cwd(), 'node_modules', '.bin', 'electron.cmd')
 })
 
 function createWindow()
@@ -19,7 +21,7 @@ function createWindow()
 			nodeIntegration:true
 		}
 	});
-	win.webContents.openDevTools();
+	//win.webContents.openDevTools();
     win.loadFile(path.join(__dirname+'/index.html'));
 }
 
@@ -29,4 +31,9 @@ app.on('ready', function(){
     //template = []
 	//const menu = Menu.buildFromTemplate(template)
 	//Menu.setApplicationMenu(menu);
+})
+
+ipc.on('close',(event,args)=>{
+	console.log(args);
+	event.returnValue="Success";
 })
