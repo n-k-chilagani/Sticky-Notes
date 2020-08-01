@@ -7,10 +7,6 @@ const url = require('url');
 
 const ipc = electon.ipcMain;
 
-require('electron-reload')(process.cwd(), {
-    electron: path.join(process.cwd(), 'node_modules', '.bin', 'electron.cmd')
-})
-
 function createWindow()
 {
     var win = new BrowserWindow({

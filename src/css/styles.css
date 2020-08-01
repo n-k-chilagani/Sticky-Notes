@@ -4,6 +4,7 @@
     background-color:black;
     color:whitesmoke;
     padding-left: 7px;
+    border: 0;
     -webkit-app-region:no-drag;
     
 }
